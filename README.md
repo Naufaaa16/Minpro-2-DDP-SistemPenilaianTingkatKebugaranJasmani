@@ -5,6 +5,8 @@ NIM: 2609116060
 KELAS: B
 JUDUL MINPRO: SISTEM PENILAIAN TINGKAT KEBUGARAN JASMANI
 
+Note: maaf mba dan abang jika terlihat kurang rapi, saya sudah berusaha selengkap, serapi mungkin untuk penjelasannya, dan saya ada nambahin keterangan line nya di subbab juga ya abang dan mba Terimakasihh
+
 SISTEM PENILAIAN TINGKAT KEBUGARAN JASMANI
 
   Jadi sistem ini mencatat dan menilai hasil tes kebugaran peserta. Setiap peserta memiliki nama dan tiga skor tes kebugaran, yaitu push up, sit up, dan lari (masing-masing skor bernilai 0-100), lalu program menghitung rata-ratanya dan menentukan kategori kebugarannya: kurang, cukup, baik, atau sangat baik. Akses dibagi dua role lewat login: 
@@ -35,7 +37,7 @@ B. User biasa
 
 2. KODE PROGRAM
    Berikut ini penjelasan kode program beserta penjelasannya
-A. Penggunaan Library
+A. Penggunaan Library (line 1-4 python)
    import pwinput
    import os
    import math
@@ -43,7 +45,7 @@ A. Penggunaan Library
 
    jadi kode diatas merupakan penggunaan library. import pwinput digunakan untuk    menyembunyikan password saat diketik, import os digunakan agar bisa merapikan output, import math digunakan untuk menghitung rata-rata nilai, import time      digunakan untuk jeda diantara program selesai hingga kembali semula ke laman login
 
-B. Menyimpan data akun login dan data peserta
+B. Menyimpan data akun login dan data peserta (line 6-10 python)
    akun = {
     "admin": {"password": "mantap321", "role": "admin"},
     "user": {"password": "keren123", "role": "user"}
@@ -52,7 +54,7 @@ B. Menyimpan data akun login dan data peserta
 
   kode ini menggunakan dictionary untuk menyimpan akun yang boleh login ke sistem, jadi role admin dan user dapat login ke sistem jika password benar,      jika salah akan diarahkan untuk input ulang maksimal 3 kali. lalu ada list kosong untuk menyimpan data peserta yang dimasukkan oleh admin.
 
-C. Penggunaan fungsi login
+C. Penggunaan fungsi login (line 12-16 python)
   def login(username, password):
     if username in akun and akun[username]["password"] == password:
         return True
@@ -61,7 +63,7 @@ C. Penggunaan fungsi login
 
   digunakan untuk memeriksa apakah username dan password yang dimasukkan benar     (login berhasil) atau salah (login gagal).
 
-D. Penggunaan fungsi input skor
+D. Penggunaan fungsi input skor (line 18-27 python)
   def input_skor(jenis_latihan):
     while True:
         try:
@@ -74,14 +76,14 @@ D. Penggunaan fungsi input skor
             print("Input skor tidak valid, masukkan angka dari 0 hingga 100")
       kode ini digunakan untuk memasukkan dan memvalidasi skor agar hanya menerima angka 0-100. jika melebihi atau kurang maka user akan diarahkan untuk menginput ulang.
 
-E. Penggunaan fungsi dan library math untuk menghitung rata rata
+E. Penggunaan fungsi dan library math untuk menghitung rata rata (line 29-32 python)
       def hitung_rata_rata(push_up, sit_up, lari):
       total = math.fsum([push_up, sit_up, lari])
       rata_rata = total / 3
       return rata_rata
       math.fsum digunakan untuk menjumlahkan ketiga skor lalu jumlah skor dibagi 3 untuk menghitung rata rata. Return digunakan untuk mengembalikan hasil rata rata agar bisa digunakan dibagian kode lainnya.
 
-F. Penggunaan fungsi untuk kategori
+F. Penggunaan fungsi untuk kategori (line 34-42 python)
       def tentukan_kategori(rata_rata):
         if rata_rata <= 59:
             return "kurang"
@@ -97,7 +99,7 @@ F. Penggunaan fungsi untuk kategori
       jika 76-85 masuk kategori baik
       jika >85 masuk kategori sangat baik
 
-G. Pengunaan fungsi untuk menambah data
+G. Pengunaan fungsi untuk menambah data (line 44-60 python)
     def tambah_data():
     nama = input("Masukkan nama peserta: ")
     push_up = input_skor("push up")
@@ -116,7 +118,7 @@ G. Pengunaan fungsi untuk menambah data
     kode ini untuk dapat memasukkan data peserta, skor latihan, hasil rata-rat, menentukan kategori lalu menyimpan data ke data           peserta, Berikut ini outputnya
     <img width="667" height="420" alt="WhatsApp Image 2026-10-06 at 18 24 52" src="https://github.com/user-attachments/assets/b0d49a6b-14ce-4c4a-8867-ae71b19c4227" />
 
-H. Penggunaan fungsi untuk hapus data
+H. Penggunaan fungsi untuk hapus data (line 62-78 python)
     def hapus_data():
     if len(data_peserta) == 0:
         print("Data belum dimasukkan")
@@ -136,7 +138,7 @@ H. Penggunaan fungsi untuk hapus data
 berikut ini output programnya:
       <img width="1473" height="286" alt="WhatsApp Image 2026-10-06 at 18 27 22" src="https://github.com/user-attachments/assets/919e87ae-4c35-475e-b371-e13ecefd4474" />
 
-I. Pengunaan fungsi untuk melihat data
+I. Pengunaan fungsi untuk melihat data (line 80-91 python)
     def lihat_data():
     if len(data_peserta) == 0:
         print("Data belum dimasukkan")
@@ -153,7 +155,7 @@ I. Pengunaan fungsi untuk melihat data
 berikut ini output dari program
       <img width="385" height="385" alt="WhatsApp Image 2026-10-06 at 18 25 23" src="https://github.com/user-attachments/assets/cd3bab00-e6d3-4b74-bafb-78e87aae9af6" />
 
-J. Penggunaan fungsi untuk ubah data
+J. Penggunaan fungsi untuk ubah data (line 93-130 python)
     def ubah_data():
     if len(data_peserta) == 0:
         print("Data belum dimasukkan")
@@ -188,7 +190,7 @@ J. Penggunaan fungsi untuk ubah data
 berikut ini tampilan output di program
       <img width="1479" height="393" alt="WhatsApp Image 2026-10-06 at 18 27 08" src="https://github.com/user-attachments/assets/e3319afa-7774-4fa0-9095-a988303257ea" />
 
-K. Penggunaan library os dan pwinput
+K. Penggunaan library os dan pwinput (line 132-150 python)
       while True:
     os.system("cls") if os.name == "nt" else "clear"
     print("===== SISTEM PENILAIAN TINGKAT KEBUGARAN JASMANI =====")
@@ -205,7 +207,7 @@ K. Penggunaan library os dan pwinput
             print(f"Login gagal. Username atau password anda salah. Percobaan ke-{percobaan}/3")
         Kode ini digunakan untuk menjalankan proses login dengan pwinput unutk menyembunyikan password dan menghitung karakter password, merapikan output, membatasi penggunaan login maksimal 3 kali.
 
-L. Penggunaan kode untuk tampilan menu admin
+L. Penggunaan kode untuk tampilan menu admin (line 152-176 python)
     elif akun[user]["role"] == "admin":
         while True:
             print("===== MENU ADMIN =====")
@@ -231,7 +233,7 @@ L. Penggunaan kode untuk tampilan menu admin
                 print("Pilihan tidak valid. Silakan pilih menu yang tersedia.")
         Kode ini berfungsi untuk menampilkan menu utama pada admin yang berisikan 5 pilihan menu lalu menggunakan time 5 detik untuk menampilkan output terima kasih kepada admin sebelum program kembali ke halaman login.
         <img width="666" height="255" alt="WhatsApp Image 2026-10-06 at 18 27 39" src="https://github.com/user-attachments/assets/4cea8b0f-1bde-47a5-a2ce-68dd2c8a225c" />
-    M. Penggunaan kode untuk tampilan menu user biasa
+    M. Penggunaan kode untuk tampilan menu user biasa (line 178-193 python)
     elif akun[user]["role"] == "user":
         while True:
             print("===== MENU =====")
@@ -251,7 +253,7 @@ Berikut ini tampilan menu USER
         Pilihan no 1: <img width="471" height="129" alt="WhatsApp Image 2026-10-06 at 18 29 13" src="https://github.com/user-attachments/assets/a700ac4a-fab7-47f7-9096-32e87dd98673" />
         pilihan no 2: <img width="595" height="162" alt="WhatsApp Image 2026-10-06 at 18 29 25" src="https://github.com/user-attachments/assets/9c270441-bf51-4472-8088-86840a223999" />
 
-PENGIMPLEMENTASIAN UNTUK NILAI TAMBAH
+PENGIMPLEMENTASIAN UNTUK NILAI TAMBAH (line 18-27 dan line 1-4 python)
 def input_skor(jenis_latihan):
     while True:
         try:
@@ -269,15 +271,3 @@ import os
 import math
 import time
 Di kode ini menggunakan 4 library untuk password, membersihkan layar, menghitung rata rata, jeda 5 detik (penjelasan lebih lengkap ada di penjelasan program diatas)
-        
-    
-
-
-      
-
-
-  
-
-      
-
-   
