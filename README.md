@@ -20,7 +20,7 @@ Program ini menggunakan function untuk kode untuk masing masing pilihan menu, di
    dimulai dari menginput username dan password, jika akun tersimpan di data base maka akan lanjut ke proses berikutnya, jika tidak login akan gagal dan diberi kesempatan 3 kali sebelum program otomatis selesai. Sistem ini mempunyai 2 role untuk login, jika admin login maka admin akan mendapat 5 pilihan di menu yaitu, tambah data, hapus data, lihat data, ubah data, keluar. Sedangkan jika user biasa yang login maka akan tertampil 2 pilihan di menu yaitu lihat data dan keluar.
 
    berikut ini penjelasan alur program
-   A. admin
+A. admin
       jika admin memilih pilihan no 1: admin akan menginput nama dan 3 skor lalu program akan memeriksa apakah skor dalam rentang 1-100 jika ya maka program akan menghitung rata-rata dan menentukan kategori nilai dan setelah itu program akan menyimpan data          yang sudah di input, jika rentang nilai yang diinput bukan 1-100 maka program akan menyarankan dan mengarahkan admin untuk            menginput ulang.
       
       jika admin memilih pilihan no 2: admin akan diarahkan untuk melihat tampilan data yang sudah tersimpan (berisi nama dan no peserta), lalu admin menginput no peserta yang ingin dihapus, program akan menghapus data dan akan menampilkan tulisan data berhasil dihapus.
@@ -29,9 +29,8 @@ Program ini menggunakan function untuk kode untuk masing masing pilihan menu, di
 
       jika admin memilih pilihan no 4: admin akan melihat tampilan daftar nomor dan nama peserta lalu admin akan menginput nama dan skor peserta ulang, lalu program juga akan menghitung rata rata nilai dan menyesuaikan kategori nilai peserta.
       
-   B. User biasa
+B. User biasa
       jika user memilih pilihan no 1: user akan otomatis melihat data peserta yang berisikan nama, 3 skor, rata-rata, kategori.
-
       jika user memilih pilihan no 2: program akan selesai dan menampilkan output terima kasih
 
 2. KODE PROGRAM
