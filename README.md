@@ -5,7 +5,7 @@ NIM: 2609116060
 KELAS: B
 JUDUL MINPRO: SISTEM PENILAIAN TINGKAT KEBUGARAN JASMANI
 
-Note: maaf mba dan abang jika terlihat kurang rapi, saya sudah berusaha selengkap, serapi mungkin untuk penjelasannya, dan saya ada nambahin keterangan line nya di subbab juga ya abang dan mba Terimakasihh
+Note: maaf mba dan abang jika terlihat kurang rapi, saya sudah berusaha selengkap, serapi mungkin untuk penjelasannya, dan saya ada nambahin keterangan line nya di subjudul juga ya abang dan mba Terimakasihh
 
 SISTEM PENILAIAN TINGKAT KEBUGARAN JASMANI
 
