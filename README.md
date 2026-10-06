@@ -16,5 +16,7 @@ User biasa hanya dapat melihat data yang sudah dimasukkan admin.
 Program ini menggunakan function untuk kode untuk masing masing pilihan menu, dictionary untuk menyimpan akun dan data peserta, serta library pwinput untuk input password, os untuk merapikan layar, dan math untuk menghitung nilai, time untuk jeda sebelum kembali ke halaman login semula.
 
 1. FLOWCHART
-   ![Sistem Flowchart](flowchart minpro 2 ddp.drawio)
+   <img width="1600" height="1476" alt="WhatsApp Image 2026-10-06 at 18 50 12" src="https://github.com/user-attachments/assets/80c5f069-6875-4aa7-90e9-f41ef3a7f056" />
+   
+
    
