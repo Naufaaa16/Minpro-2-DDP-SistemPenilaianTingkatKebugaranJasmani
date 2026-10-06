@@ -129,24 +129,6 @@ def ubah_data():
         else:
             print("Data peserta tidak ditemukan!")
 
-def hapus_data():
-    if len(data_peserta) == 0:
-        print("Data belum dimasukkan")
-    else:
-        for i, peserta in enumerate(data_peserta):
-            print(f"{i + 1}. {peserta['nama']}")
-
-        nomor = int(input("Masukkan nomor peserta yang ingin dihapus: "))
-
-        if 1 <= nomor <= len(data_peserta):
-            indeks = nomor - 1
-            peserta = data_peserta[indeks]
-            print(f"Data yang akan dihapus: {peserta}")
-            data_peserta.pop(indeks)
-            print("Data berhasil dihapus")
-        else:
-            print("Data peserta tidak ditemukan!")
-
 while True:
     os.system("cls") if os.name == "nt" else "clear"
     print("===== SISTEM PENILAIAN TINGKAT KEBUGARAN JASMANI =====")
